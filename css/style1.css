@@ -1,0 +1,18 @@
+
+.site-logo-form{
+    width: 350px;
+    height: 100px;
+    margin-left: 40%;
+    margin-right: 30% ;
+}
+.login-form{
+    width: 400px;
+    border:2px solid #ccc;
+    padding: 30px;
+    background: ghostwhite;
+    border-radius: 15px;
+    box-shadow: 2px 2px lightblue;
+}
+#password{
+    text-align: center;
+}
