@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,7 +13,6 @@
 </head>
 <body>
 <?php include "../admin/admin_navbar.php";?>
-
 
 
 <?php include "../js/js.php";?>

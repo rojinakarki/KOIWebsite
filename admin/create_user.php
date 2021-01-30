@@ -11,7 +11,7 @@ $errors = array('first_name'=>'',
                 'dob'=>'',
                 'role'=>'',
                 'status'=>'');
-if(isset($_POST['create'])) {
+if(isset($_POST['create-user'])) {
 //    check First Name
     if (empty($_POST['first_name'])) {
         $errors['first_name'] = 'First Name is required <br/>';
@@ -34,8 +34,10 @@ if(isset($_POST['create'])) {
         }
     }
 
-//    initialize password
-    $password = rand_string(8);
+//  calculates the MD5 hash of a generated password
+    $tempPass = rand_string(8);
+    echo $tempPass;
+    $password = md5($tempPass);
 
 //    check Address
     if (empty($_POST['address'])) {
@@ -87,23 +89,26 @@ if(isset($_POST['create'])) {
         $email_address= mysqli_real_escape_string($conn,$_POST['email_address']);
         $mobile_number= mysqli_real_escape_string($conn,$_POST['mobile_number']);
         $dob=mysqli_real_escape_string($conn,$_POST['dob']);
-        $role = $_POST['role'];
-        $status = $_POST['status'];
+        $role = mysqli_real_escape_string($conn,$_POST['role']);
+        $status = mysqli_real_escape_string($conn,$_POST['status']);
 
-        $sql = "INSERT INTO user(password,first_name,last_name,address,email_address,
+//      Insert user details into DB Table User
+        $sqlQuery = "INSERT INTO user(password,first_name,last_name,address,email_address,
                 mobile_number,dob,role,status) VALUES ('$password','$first_name','$last_name',
                 '$address','$email_address','$mobile_number','$dob','$role','$status')";
-//        save to db and check
-        if(mysqli_query($conn,$sql)){
+
+//      Save to DB and check
+        if(mysqli_query($conn,$sqlQuery)){
             // success
             header('Location:user.php');
         }else{
             // error
-            echo "query error:". mysqli_error($conn);
+            echo "Query error:". mysqli_error($conn);
         }
     }
 }
 // end of POST check
+// function to generate random password
 function rand_string( $length ) {
     $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     return substr(str_shuffle($chars),0,$length);
@@ -122,32 +127,40 @@ function rand_string( $length ) {
 </head>
 <body>
 <?php include "../admin/admin_navbar.php";?>
+<div class="title">
+    <h2><strong>Add User</strong></h2>
+    <h3>Add New User into the System</h3>
+</div>
 <div class="d-flex justify-content-center" >
     <form action="create_user.php" method="post" class="w-50">
         <div class ="row pt-2">
             <div class="col">
-    <!--First Name-->
+            <!--First Name-->
                 <?php inputElement("fas fa-id-card-alt","text", "first_name","First Name","$first_name","");?>
                 <?php echo $errors['first_name'];?>
             </div>
             <div class="col">
-    <!--Last Name-->
+            <!--Last Name-->
             <?php inputElement("fas fa-id-card-alt","text", "last_name","Last Name","$last_name","");?>
             <?php echo $errors['last_name'];?>
             </div>
         </div>
-    <!--Address-->
+
+            <!--Address-->
             <?php inputElement("fas fa-map-marker-alt","text","address","Address","$address","");?>
             <?php echo $errors['address'];?>
-    <!--Email Address-->
+
+            <!--Email Address-->
             <?php inputElement("fas fa-envelope-square","text","email_address","Email Address","$email_address","");?>
             <?php echo $errors['email_address'];?>
-    <!--Mobile Number-->
+
+            <!--Mobile Number-->
             <?php inputElement("fas fa-phone-square-alt","text","mobile_number","Mobile Number","$mobile_number","");?>
             <?php echo $errors['mobile_number'];?>
-    <!--Date of Birth-->
-        <?php inputElement("fas fa-birthday-cake","text", "dob","Date Of Birth:YY/MM/DD","$dob", "");?>
-        <?php echo $errors['dob'];?>
+
+            <!--Date of Birth-->
+            <?php inputElement("fas fa-birthday-cake","text", "dob","Date Of Birth:YY/MM/DD","$dob", "");?>
+            <?php echo $errors['dob'];?>
 
         <div class ="row pt-2">
             <div class="col">
@@ -170,8 +183,8 @@ function rand_string( $length ) {
                 </div>
             </div>
         </div>
-        <div class="d-flex">
-            <?php buttonElement("btn-create","btn btn-success", "Create","create","data-toggle='tooltip' data-placement='bottom' title='Create' ");?>
+        <div class="col">
+            <?php buttonElement("btn-create","btn btn-success btn-block", "Create","create-user","data-toggle='tooltip' data-placement='bottom' title='Create' ");?>
         </div>
     </form>
 </div>

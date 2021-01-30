@@ -7,16 +7,30 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="../admin/create_user.php">User</a>
+                <a class="nav-link" href="../admin/user.php">User |</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../admin/create_course.php">Course</a>
+                <a class="nav-link" href="../admin/create_user.php"> Add User |</a>
+            <li class="nav-item">
+                <a class="nav-link" href="../admin/edit_user.php">Edit User |</a>
             </li>
-            </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+            <li class="nav-item">
+                <a class="nav-link" href="../admin/course.php">Course |</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../admin/create_course.php">Add Course |</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../admin/edit_course.php">Edit Course |</a>
+            </li>
+            <li class="nav-item topnav-right">
+                <?php if(isset($_SESSION['user_id'])){ ?>
+                    <a class="nav-link" href="../static-pages/index.php">Logout</a>
+                    <?php session_destroy();?>
+                <?php }?>
+            </li>
+        </ul>
+
     </div>
 </nav>
 
