@@ -251,9 +251,6 @@ legend{
 .btn:hover {
     background-color: #113095;
 }
-.container{
-    width:100%;
-}
 .left-half{
     position: absolute;
     width: 500px;

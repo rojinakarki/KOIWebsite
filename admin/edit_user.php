@@ -1,4 +1,5 @@
 <?php
+include("../include/session_check.php");
 require_once("../include/component.php");
 include("../connectDB.php");
 ?>
@@ -22,7 +23,15 @@ if(isset($_POST['update'])) {
     address='$update_address',email_address='$update_email_address',
     dob='$update_dob',mobile_number='$update_mobile_number',
     role='$update_role',status='$update_status' WHERE user_id = $userRetrieved";
-    $result2=mysqli_query($conn, $sql2);
+
+    if(mysqli_query($conn,$sql2)){
+        // success
+        header('Location:user.php');
+    }else{
+        // error
+        echo "Query error:". mysqli_error($conn);
+    }
+
 }
 
 ?>

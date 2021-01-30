@@ -23,10 +23,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="../admin/edit_course.php">Edit Course |</a>
             </li>
+
             <li class="nav-item topnav-right">
                 <?php if(isset($_SESSION['user_id'])){ ?>
-                    <a class="nav-link" href="../static-pages/index.php">Logout</a>
-                    <?php session_destroy();?>
+                    <a class="nav-link" href="../logout.php">Logout</a>
                 <?php }?>
             </li>
         </ul>

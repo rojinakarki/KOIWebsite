@@ -58,7 +58,7 @@
             <td><img class="listing-img" src="../resources/agents.jpg" alt="KOIContact"></td>
         </tr>
         <tr>
-            <td><a href ="course.php"> <u> Courses </u></a><br></td>
+            <td><a href ="course_summary.php"> <u> Courses </u></a><br></td>
             <td><a href ="#"> Current Students </a><br></td>
             <td><a href ="#"> Future Students </a><br></td>
             <td><a href ="contact.php"> <u> Contact Us</u></a><br></td>

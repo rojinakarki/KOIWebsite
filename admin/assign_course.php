@@ -1,4 +1,5 @@
 <?php
+include("../include/session_check.php");
 require_once("../include/component.php");
 include("../connectDB.php");
 $userRetrieved = $_GET["userid"]; 
@@ -14,9 +15,15 @@ if(isset($_POST['update'])) {
     $assign_course_course_id=$_POST['assign_course'];
     $sql3 ="INSERT INTO enrollment (user_id, course_id)
     VALUES ('$userRetrieved', '$assign_course_course_id');";
-    $result3=mysqli_query($conn, $sql3);
 
-    echo "<meta http-equiv='refresh' content='0'>";
+//    echo "<meta http-equiv='refresh' content='0'>";
+    if(mysqli_query($conn,$sql3)){
+        // success
+        header('Location:user.php');
+    }else{
+        // error
+        echo "Query error:". mysqli_error($conn);
+    }
 }
 
 ?>
@@ -40,7 +47,7 @@ if(isset($_POST['update'])) {
         <h3>Assign course to users</h3>
     </div>
     <div class="d-flex justify-content-center" >
-        <form action="user.php" method="post" class="w-50">
+        <form action="" method="post" class="w-50">
         <?php while($row2 = mysqli_fetch_array($result2)) :?>
             <!--User Id-->
             <div class="col">

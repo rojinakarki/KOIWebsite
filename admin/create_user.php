@@ -1,6 +1,7 @@
 <?php
-   require_once("../include/component.php");
-   include("../connectDB.php");
+include("../include/session_check.php");
+require_once("../include/component.php");
+include("../connectDB.php");
 // Initializing the variables
 $first_name = $last_name=$password= $address = $email_address = $mobile_number = $dob = $role = $status ='';
 $errors = array('first_name'=>'',

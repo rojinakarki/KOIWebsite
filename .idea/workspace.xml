@@ -3,8 +3,69 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5912ea6f-4aa0-49ef-a2fe-05f7f6217e68" name="Default Changelist" comment="" />
+    <list default="true" id="5912ea6f-4aa0-49ef-a2fe-05f7f6217e68" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/include/session_check.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/koiwebsite1.mwb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecturer/all_course_details.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecturer/edit_course_content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecturer/lecturer_course.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reset_password_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin_dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin_navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assign_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assign_course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/create_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/create_course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/create_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/create_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/edit_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/edit_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/css.php" beforeDir="false" afterPath="$PROJECT_DIR$/css/css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/js.php" beforeDir="false" afterPath="$PROJECT_DIR$/js/js.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecturer/add_course_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/add_course_content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static-pages/course.php" beforeDir="false" afterPath="$PROJECT_DIR$/static-pages/course_summary.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static-pages/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/static-pages/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/student_dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/student_navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_navbar.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +81,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -28,6 +92,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP from Xampp" />
   <component name="ProjectId" id="1nNMXxMacZwei5aAIYYWOYhyUvM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,10 +107,6 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite" />
-      <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite\CSS" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite\static-pages" />
       <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite\php" />
@@ -53,8 +114,16 @@
       <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite\student" />
       <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite\resources" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite\admin" />
+      <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite" />
+      <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite\CSS" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\ma\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5912ea6f-4aa0-49ef-a2fe-05f7f6217e68" name="Default Changelist" comment="" />
@@ -69,33 +138,94 @@
       <workItem from="1611389719759" duration="12066000" />
       <workItem from="1611529522277" duration="26983000" />
       <workItem from="1611615595606" duration="29710000" />
-      <workItem from="1611658156179" duration="42000" />
+      <workItem from="1611658156179" duration="699000" />
+      <workItem from="1611735753224" duration="2489000" />
+      <workItem from="1611815231113" duration="7449000" />
+      <workItem from="1611881582495" duration="43108000" />
+      <workItem from="1611971686765" duration="1201000" />
+      <workItem from="1611973013734" duration="33595000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="401" y="165" key="#Notifications" timestamp="1611971926820">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="401" y="165" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1611971926820" />
+    <state x="342" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612016631087">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="342" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1612016631087" />
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1611535424703">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1611535424703" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1611282133017">
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1611972570445">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1611282133017" />
-    <state x="674" y="224" key="NewPhpFileDialog" timestamp="1611652979652">
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1611972570445" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1611971733877">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="674" y="224" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1611652979652" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1611971733877" />
+    <state x="516" y="239" key="Github.ShareDialog" timestamp="1611972303945">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="516" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1611972303945" />
+    <state x="445" y="46" key="Github.UntrackedFilesDialog" timestamp="1611658336441">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="445" y="46" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1611658336441" />
+    <state x="121" y="51" key="MergeDialog" timestamp="1612021059878">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="51" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1612021059878" />
+    <state x="674" y="224" key="NewPhpFileDialog" timestamp="1612021812303">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="674" y="224" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1612021812303" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1611289363023">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1611289363023" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1611287935648">
+    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612022229979">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1611287935648" />
+    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1612022229979" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1612020219237">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1612020219237" />
+    <state x="471" y="132" key="svn.repositoryBrowser" timestamp="1611751009607">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="471" y="132" key="svn.repositoryBrowser/0.0.1280.680@0.0.1280.680" timestamp="1611751009607" />
   </component>
 </project>

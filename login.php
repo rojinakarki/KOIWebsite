@@ -1,10 +1,10 @@
 <?php
-session_start();
 include("connectDB.php");
 // Initializing the variables
 $user_id=$password='';
 $errors = array('user_id'=>'', 'password'=>'');
 if(isset($_POST['submit'])) {
+    session_start();
 //    check user_id
     if (empty($_POST['user_id'])) {
         $errors['user_id'] = 'UserID is required <br/>';

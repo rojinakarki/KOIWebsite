@@ -6,7 +6,7 @@
     <div class="dropdown">
         <button class="dropbtn">Courses </button>
         <div class="dropdown-content">
-            <a href="../static-pages/course.php">Courses Summary</a>
+            <a href="../static-pages/course_summary.php">Courses Summary</a>
             <a href="#">Undergraduate Courses</a>
             <a href="#">Postgraduate Courses</a>
         </div>

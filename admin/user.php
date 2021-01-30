@@ -1,6 +1,9 @@
 <?php
+include("../include/session_check.php");
 require_once("../include/component.php");
 include("../connectDB.php");
+
+
 
 if(isset($_POST['search'])){
     $valueToSearch = $_POST['valueToSearch'];
@@ -66,9 +69,8 @@ else{
                         <td><?php echo $row['role'];?></td>
                         <td><?php echo $row['status'];?></td>
                         <td><a href="edit_user.php?userid=<?php echo $row['user_id'] ?>"><i class="fas fa-edit"></i></a>
-                        <?php  if($row['role'] =='lecturer'or $row['role'] =='student'){
-                            echo "<td><a href=\"assign_course.php?userid=<?php echo $row['user_id'] ?>\"> <i class=\"fas fa-tasks\"></i></a>";
-                        }?>
+                        <?php  if($row['role'] =='lecturer'|| $row['role'] =='student'){
+                            echo "<td><a href=\"assign_course.php?userid=".$row['user_id']."\"><i class=\"fas fa-tasks\"></i></a>";}?>
                     </tr>
                 <?php endwhile; ?>
                 </tbody>

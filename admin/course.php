@@ -1,4 +1,5 @@
 <?php
+include("../include/session_check.php");
 require_once("../include/component.php");
 include("../connectDB.php");
 

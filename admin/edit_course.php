@@ -1,12 +1,11 @@
 <?php
+include("../include/session_check.php");
 require_once("../include/component.php");
 include("../connectDB.php");
-?>
-<?php
 $courseRetrieved = $_GET["courseid"];
-$sql = "SELECT * FROM course WHERE course_id = '$courseRetrieved'";
-$result=mysqli_query($conn, $sql);
-$count = mysqli_num_rows($result);
+$sql1 = "SELECT * FROM course WHERE course_id = '$courseRetrieved'";
+$result1=mysqli_query($conn, $sql1);
+$count = mysqli_num_rows($result1);
 
 if(isset($_POST['update'])) {
     $update_course_name=$_POST['update_course_name'];
@@ -16,11 +15,15 @@ if(isset($_POST['update'])) {
     $sql2 ="UPDATE course 
     SET course_name ='$update_course_name', course_start_time='$update_course_start',
     course_finish_time='$update_course_finish' WHERE course_id = '$courseRetrieved'";
-    $result2=mysqli_query($conn, $sql2);
 
+    if(mysqli_query($conn,$sql2)){
+        // success
+        header('Location:course.php');
+    }else{
+        // error
+        echo "Query error:". mysqli_error($conn);
+    }
 }
-
-
 ?>
 
 <!doctype html>
@@ -41,11 +44,10 @@ if(isset($_POST['update'])) {
 </div>
 <div class="d-flex justify-content-center" >
     <form action="" method="POST" class="w-50">
-        <?php while($row = mysqli_fetch_array($result)) :
-            $courseName= $row['course_name'];
-            $courseStart= $row['course_start_time'];
-            $courseFinish= $row['course_finish_time'];
-
+        <?php while($row1 = mysqli_fetch_array($result1)) :
+            $courseName= $row1['course_name'];
+            $courseStart= $row1['course_start_time'];
+            $courseFinish= $row1['course_finish_time'];
             ?>
             <!--Course ID-->
             <div class="col">
