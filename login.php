@@ -1,41 +1,61 @@
 <?php
 session_start();
 include("connectDB.php");
-if(isset($_POST['submit'])){
-    $username = $_POST['username'];
-//        addslashes($_POST['username']);
-    $password = $_POST['password'];
-//        md5(addslashes($_POST['password']));
-    $query = "select * from user where username='$username' AND password='$password'";
-    $result = mysqli_query($conn,$query);
-    $count = mysqli_num_rows($result);
-
-    if($count == 1)
-    {
-        while ($row = mysqli_fetch_array($result)){
-        if ($row['role'] == "admin"){
-            $_SESSION['role'] = $row['role'];
-            $_SESSION['user'] = $username;
-            echo "<script>alert('You have logged in successfully!!');</script>";
-            echo "<script>window.location='admin_dashboard.include';</script>";
-
-        }
-
-        elseif ($row['role'] == "lecturer"){
-            $_SESSION['role'] = $row['role'];
-            $_SESSION['user'] = $username;
-            echo "<script>window.location='lecturer_dashboard.include';</script>";
-
-        }
-        else{
-            $_SESSION['user'] =$username;
-            $_SESSION['role'] =$row['role'];
-            echo "<script>window.location='student_dashboard.include';</script>";
+// Initializing the variables
+$user_id=$password='';
+$errors = array('user_id'=>'', 'password'=>'');
+if(isset($_POST['submit'])) {
+//    check user_id
+    if (empty($_POST['user_id'])) {
+        $errors['user_id'] = 'UserID is required <br/>';
+    } else {
+        $user_id = $_POST['user_id'];
+        if (!preg_match("/^[0-9]+$/", $user_id)) {
+            $errors['user_id'] = "UserID must be numbers only";
         }
     }
-    } else
-    {
-        echo "<script>alert('Cannot Login !!');</script>";
+//    check password
+    if (empty($_POST['password'])) {
+        $errors['password'] = 'Password is required <br/>';
+    } else {
+        $password = $_POST['password'];
+        //md5($_POST['password']);
+    }
+    if (array_filter($errors)) {
+
+    } else {
+        $user_id = mysqli_real_escape_string($conn, $_POST['user_id']);
+        $password = mysqli_real_escape_string($conn, $_POST['password']);
+//      Get user details based on user input
+        $sqlQuery = "SELECT * FROM USER WHERE USER_ID='$user_id' AND PASSWORD='$password'";
+        $result = mysqli_query($conn, $sqlQuery);
+        $count = mysqli_num_rows($result);
+        if ($count == 1) {
+            while ($row = mysqli_fetch_array($result)) {
+                $_SESSION['user_id'] = $row['user_id'];
+                $_SESSION['password'] = $row['password'];
+                if ($row['status'] == 'passive')
+                {
+                    $_SESSION['errorMessage']= "Your account has been locked.Please contact admin";
+                    header("location:login.php");
+                    exit();
+                }
+                switch ($row['role']) {
+                    case 'admin':
+                        header("location:admin/admin_dashboard.php");
+                        exit();
+                    case 'lecturer':
+                        header("location:lecturer/lecturer_dashboard.php");
+                        exit();
+                    case 'student':
+                        header("location:student/student_dashboard.php");
+                        exit();
+                }
+            }
+        } else {
+            $_SESSION['errorMessage'] = "Invalid Credentials. Try Again!";
+            header("location:login.php");
+        }
     }
 }
 ?>
@@ -56,14 +76,21 @@ if(isset($_POST['submit'])){
     <img class="rounded site-logo-form d-block" alt="KOI Logo" src="resources/site-logo.png">
     <form action="" class="login-form mx-auto" method="post">
             <legend style="text-align: center"><i class="fas fa-school">  KOI SIGN IN</i></legend>
+
+            <?php if(isset($_SESSION["errorMessage"])) {?>
+            <span class="error"> <?php echo $_SESSION['errorMessage'];?> </span>
+            <?php unset($_SESSION["errorMessage"]);} ?>
+
+            <br>
             <label for="user_id" class="form-label"><b>UserID</b></label>
-            <input type="text" class="form-control" placeholder="Enter UserID" name="user_id">
+            <input type="text" class="form-control" placeholder="Enter UserID" value="<?php echo $user_id?>" name="user_id">
+            <span class="error"> <?php echo $errors['user_id'];?> </span>
             <br>
             <label for="password" class="form-label"><b>Password</b></label>
             <input type="password" class="form-control" placeholder="Enter Password" name="password">
+            <span class="error"> <?php echo $errors['password'];?></span>
             <br>
             <button type="submit" class="form-control btn btn-success" name="submit">Login</button>
-            <label><input type="checkbox"  checked="checked" name="remember"> Remember me</label>
             <br>
             <span class="password">Forgot <a href="#">password?</a></span>
     </form>
