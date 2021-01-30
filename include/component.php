@@ -8,7 +8,7 @@ function inputElement($icon,$type, $name,$placeholder,$value,$attr){
                         <div class=\"input-group-prepend\">
                             <div class=\"input-group-text bg-info\"><i class='$icon'></i></div>
                         </div>
-                        <input type='$type' name='$name' '$attr' placeholder='$placeholder' value='$val'  class=\"form-control\" >
+                        <input class=\"form-control\" type='$type' name='$name' '$attr' placeholder='$placeholder' value='$val'   >
                     </div>
                 </div>
     ";
