@@ -19,7 +19,7 @@ if(isset($_POST['update-course-content'])) {
 //  Move file from temp to file storage
     move_uploaded_file($file_tem_loc,$file_store);
 
-    $course_content = mysqli_real_escape_string($conn,$file_store);
+    $course_content = mysqli_real_escape_string($conn,$file_name);
 
 //  Update course content into DB Table course_content
     $sqlDelQuery = "Update course_content set course_content='$course_content' WHERE course_content_id = '$courseContentRetrieved'";

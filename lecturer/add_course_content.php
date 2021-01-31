@@ -20,7 +20,7 @@ if(isset($_POST['upload-course-content'])) {
     move_uploaded_file($file_tem_loc,$file_store);
 
     $course_id  = mysqli_real_escape_string($conn,$courseRetrieved);
-    $course_content = mysqli_real_escape_string($conn,$file_store);
+    $course_content = mysqli_real_escape_string($conn,$file_name);
 
 //  Insert course content into DB Table course_content
     $sql = "INSERT INTO course_content(course_content,course_id)

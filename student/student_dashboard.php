@@ -1,17 +1,16 @@
-<?
+<?php
 include("../include/session_check.php");
 require_once("../include/component.php");
 include("../connectDB.php");
 
 $user_id = $_SESSION['user_id'];
-//SELECT c.course_id,c.course_name, cc.course_content FROM course_content as cc
-//        inner join course as c on cc.course_id = c.course_id where cc.course_content_id =
-
- $sql = "Select c.course_id,c.course_name,c.course_start_time,c.course_finish_time,u.user_id from course as c 
-        inner join enrollment as e on e.course_id = c.course_id 
+$sql = "Select c.course_id,c.course_name,c.course_start_time,c.course_finish_time,u.user_id from course as c
+        inner join enrollment as e on e.course_id = c.course_id
         inner join user as u on e.user_id = u.user_id where e.user_id = '$user_id' ";
- $result = mysqli_query($conn,$sql);
- print_r($result);
+$result = mysqli_query($conn,$sql);
+$enrollment = mysqli_fetch_all($result,MYSQLI_ASSOC);
+mysqli_free_result($result);
+mysqli_close($conn);
 
 ?>
 <!doctype html>
@@ -26,20 +25,24 @@ $user_id = $_SESSION['user_id'];
 </head>
 <body>
 <?php include "../student/student_navbar.php";?>
-<div class="container">
-    <div class="row">
-        <div class="col s6 md3">
-            <div class="card z-depth-0">
-                <div class="card-content center">
-                    <h1> hello user</h1>
+<div class="container-fluid pt-2">
+        <div class="row">
+            <?php foreach($enrollment as $enroll){?>
+            <div class="col-sm d-flex">
+                <div class="card flex-fill" >
+                    <div class="card-header"> <?php echo htmlspecialchars($enroll['course_id']);?> </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="student_course.php?courseid=<?php echo $enroll['course_id'];?>"> <?php echo htmlspecialchars($enroll['course_name']);?></a></li>
+                            <li class="list-group-item"> Start Time: <?php echo htmlspecialchars($enroll['course_start_time']);?> </li>
+                            <li class="list-group-item"> Finish Time: <?php echo htmlspecialchars($enroll['course_finish_time']);?></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <?php }?>
         </div>
-    </div>
 </div>
-
-
-
 
 <?php include "../js/js.php";?>
 </body>

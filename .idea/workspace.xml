@@ -33,36 +33,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5912ea6f-4aa0-49ef-a2fe-05f7f6217e68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/include/session_check.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koiwebsite1.mwb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lecturer/all_course_details.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lecturer/edit_course_content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lecturer/lecturer_course.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reset_password_form.php" afterDir="false" />
+    <list default="true" id="5912ea6f-4aa0-49ef-a2fe-05f7f6217e68" name="Default Changelist" comment="updated 01/31/2021">
+      <change afterPath="$PROJECT_DIR$/student/student_course.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin_dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin_navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assign_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assign_course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/create_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/create_course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/create_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/create_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/edit_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/edit_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/css.php" beforeDir="false" afterPath="$PROJECT_DIR$/css/css.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/js.php" beforeDir="false" afterPath="$PROJECT_DIR$/js/js.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/session_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/session_check.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lecturer/add_course_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/add_course_content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecturer/edit_course_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/edit_course_content.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lecturer/lecturer_navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_navbar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static-pages/course.php" beforeDir="false" afterPath="$PROJECT_DIR$/static-pages/course_summary.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static-pages/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/static-pages/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student/student_dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student/student_navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_navbar.php" afterDir="false" />
     </list>
@@ -101,6 +80,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
@@ -143,8 +127,18 @@
       <workItem from="1611815231113" duration="7449000" />
       <workItem from="1611881582495" duration="43108000" />
       <workItem from="1611971686765" duration="1201000" />
-      <workItem from="1611973013734" duration="33595000" />
+      <workItem from="1611973013734" duration="34472000" />
+      <workItem from="1612023191263" duration="1301000" />
+      <workItem from="1612044309880" duration="13817000" />
     </task>
+    <task id="LOCAL-00001" summary="updated 01/31/2021">
+      <created>1612022424988</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612022424988</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +166,26 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated 01/31/2021" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated 01/31/2021" />
   </component>
   <component name="WindowStateProjectService">
     <state x="401" y="165" key="#Notifications" timestamp="1611971926820">
@@ -191,14 +204,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1611972570445" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1611971733877">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1612022694598">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1611971733877" />
-    <state x="516" y="239" key="Github.ShareDialog" timestamp="1611972303945">
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1612022694598" />
+    <state x="516" y="239" key="Github.ShareDialog" timestamp="1612022678664">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="516" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1611972303945" />
+    <state x="516" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1612022678664" />
     <state x="445" y="46" key="Github.UntrackedFilesDialog" timestamp="1611658336441">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -207,18 +220,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="51" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1612021059878" />
-    <state x="674" y="224" key="NewPhpFileDialog" timestamp="1612021812303">
+    <state x="674" y="224" key="NewPhpFileDialog" timestamp="1612044834218">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="674" y="224" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1612021812303" />
+    <state x="674" y="224" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1612044834218" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1611289363023">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1611289363023" />
-    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612022229979">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1612022742432">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1612022229979" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1612022742432" />
+    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612022516769">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1612022516769" />
+    <state x="297" y="151" key="run.anything.popup" timestamp="1612052326716">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1612052326716" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1612020219237">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

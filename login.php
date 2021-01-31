@@ -1,42 +1,48 @@
 <?php
+session_start();
 include("connectDB.php");
 // Initializing the variables
 $user_id=$password='';
 $errors = array('user_id'=>'', 'password'=>'');
 if(isset($_POST['submit'])) {
-    session_start();
-//    check user_id
+    //    check user_id
     if (empty($_POST['user_id'])) {
         $errors['user_id'] = 'UserID is required <br/>';
     } else {
         $user_id = $_POST['user_id'];
-        if (!preg_match("/^[0-9]+$/", $user_id)) {
-            $errors['user_id'] = "UserID must be numbers only";
+        if (!preg_match("/^[0-9]{4,8}+$/", $user_id)) {
+            $errors['user_id'] = "UserID must be numbers only with min length of 4 and max length of 8";
         }
     }
-//    check password
+
+    //    check password
     if (empty($_POST['password'])) {
         $errors['password'] = 'Password is required <br/>';
     } else {
         $password = $_POST['password'];
         //md5($_POST['password']);
     }
-    if (array_filter($errors)) {
-
-    } else {
+//    check login_log
+    $time = time()-30;
+    $ip_address = getIpAddr();
+    $check_login= mysqli_fetch_assoc(mysqli_query($conn,"Select count(*) as total_count from login_log 
+    where try_time>'$time' and ip_address = '$ip_address'"));
+    $total_count = $check_login['total_count'];
+    if($total_count==3){
+        $_SESSION['errorMessage'] ="Too many failed login attempts. Please login after 30 secs.";
+    }
+    else{
         $user_id = mysqli_real_escape_string($conn, $_POST['user_id']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
-//      Get user details based on user input
+        //Get user details based on user input
         $sqlQuery = "SELECT * FROM USER WHERE USER_ID='$user_id' AND PASSWORD='$password'";
         $result = mysqli_query($conn, $sqlQuery);
         $count = mysqli_num_rows($result);
         if ($count == 1) {
             while ($row = mysqli_fetch_array($result)) {
                 $_SESSION['user_id'] = $row['user_id'];
-                $_SESSION['password'] = $row['password'];
-                if ($row['status'] == 'passive')
-                {
-                    $_SESSION['errorMessage']= "Your account has been locked.Please contact admin";
+                if ($row['status'] == 'passive') {
+                    $_SESSION['errorMessage'] = "Your account has been locked.Please contact admin";
                     header("location:login.php");
                     exit();
                 }
@@ -52,11 +58,31 @@ if(isset($_POST['submit'])) {
                         exit();
                 }
             }
-        } else {
-            $_SESSION['errorMessage'] = "Invalid Credentials. Try Again!";
-            header("location:login.php");
+        }
+        else {
+            $total_count++;
+            $rem_attempt=3-$total_count;
+            if($rem_attempt==0){
+                $_SESSION['errorMessage'] ="Too many failed login attempts. Please login after 30 secs.";
+            }else{
+                $_SESSION['errorMessage'] = "Invalid Credentials. Try Again! </br> Remaining Attempt: $rem_attempt ";
+            }
+            $try_time= time();
+            $sql="insert into login_log(ip_address,try_time) values('$ip_address','$try_time')";
+            mysqli_query($conn,$sql);
         }
     }
+}
+
+function getIpAddr(){
+    if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+        $ipAddr = $_SERVER['HTTP_CLIENT_IP'];
+    }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+        $ipAddr = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }else{
+        $ipAddr = $_SERVER['REMOTE_ADDR'];
+    }
+    return $ipAddr;
 }
 ?>
 
