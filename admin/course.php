@@ -47,6 +47,7 @@ else{
                     <th>Course Start Time</th>
                     <th>Course Finish Time</th>
                     <th>EDIT</th>
+                    <th>DELETE</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -57,6 +58,7 @@ else{
                         <td><?php echo $row['course_start_time'];?></td>
                         <td><?php echo $row['course_finish_time'];?></td>
                         <td><a href="edit_course.php?courseid=<?php echo $row['course_id'] ?>"><i class="fas fa-edit"></i></a>
+                        <td><a href="delete_course.php?courseid=<?php echo $row['course_id'] ?>"><i class="fas fa-trash-alt"></i></a>
                     </tr>
                 <?php endwhile; ?>
                 </tbody>

@@ -6,10 +6,6 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="../student/student_course.php"> blabla|</a>
-            </li>
-
             <li class="nav-item topnav-right">
                 <?php if(isset($_SESSION['user_id'])){ ?>
                     <a class="nav-link" href="../logout.php">Logout</a>

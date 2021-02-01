@@ -36,8 +36,8 @@ mysqli_close($conn);
                             <li class="list-group-item"><strong><?php echo htmlspecialchars($enroll['course_name']);?></strong></a></li>
                             <li class="list-group-item"> Start Time: <?php echo htmlspecialchars($enroll['course_start_time']);?> </li>
                             <li class="list-group-item"> Finish Time: <?php echo htmlspecialchars($enroll['course_finish_time']);?></li>
+                            <li class="list-group-item"><a href="student_course_content.php?courseid=<?php echo $enroll['course_id'];?>"> Course Content</a></li>
                             <li class="list-group-item"><a href="student_view_assignment.php?courseid=<?php echo $enroll['course_id'];?>">View Assignment</a></li>
-                            <li class="list-group-item"><a href="student_submit_assignment.php?courseid=<?php echo $enroll['course_id'];?>"> Submit Assignment</a></li>
                         </ul>
                     </div>
                 </div>

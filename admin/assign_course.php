@@ -2,8 +2,8 @@
 include("../include/session_check.php");
 require_once("../include/component.php");
 include("../connectDB.php");
-$userRetrieved = $_GET["userid"];
 
+$userRetrieved = $_GET["userid"];
 $errors = array('errorMessage'=>'');
 
 $sql1 ="SELECT * FROM course";
@@ -15,7 +15,7 @@ $result2 = mysqli_query($conn, $sql2);
 if(isset($_POST['update'])) {
     
     $assign_course_course_id=$_POST['assign_course'];
-    $sql4="SELECT * from enrollment WHERE user_id =$userRetrieved AND course_id = '$assign_course_courseid'";
+    $sql4="SELECT * from enrollment WHERE user_id =$userRetrieved AND course_id = '$assign_course_course_id'";
     $result4=mysqli_query($conn, $sql4);
     $count = mysqli_num_rows($result4);
     if($count > 0) {

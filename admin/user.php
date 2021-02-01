@@ -2,9 +2,6 @@
 include("../include/session_check.php");
 require_once("../include/component.php");
 include("../connectDB.php");
-
-
-
 if(isset($_POST['search'])){
     $valueToSearch = $_POST['valueToSearch'];
 //  Get records based on name, role and email from user
@@ -14,12 +11,12 @@ if(isset($_POST['search'])){
 }
 // Get all records from user
 else{
-//    $sql="SELECT * FROM user";
-
     $sql="SELECT * FROM enrollment as e inner join course as c on e.course_id = c.course_id 
           right join user as u on e.user_id = u.user_id";
     $result=mysqli_query($conn, $sql);
 }
+
+
 ?>
 
 
@@ -58,6 +55,7 @@ else{
                     <th>Assigned Course</th>
                     <th>EDIT</th>
                     <th>ASSIGN</th>
+                    <th>DELETE</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -73,9 +71,12 @@ else{
                         <td><?php echo $row['role'];?></td>
                         <td><?php echo $row['status'];?></td>
                         <td><?php echo $row['course_name'];?></td>
-                        <td><a href="edit_user.php?userid=<?php echo $row['user_id'] ?>"><i class="fas fa-edit"></i></a>
-                            <?php  if($row['role'] =='lecturer'|| $row['role'] =='student'){
-                                echo "<td><a href=\"assign_course.php?userid=".$row['user_id']."\"><i class=\"fas fa-tasks\"></i></a>";}?>
+                        <td><a href="edit_user.php?userid=<?php echo $row['user_id'] ?>"><i class="fas fa-edit"></i></a></td>
+                        <?php  if($row['role'] =='lecturer'|| $row['role'] =='student'){
+                                echo "<td><a href=\"assign_course.php?userid=".$row['user_id']."\"><i class=\"fas fa-tasks\"></i></a></td>";} ?>
+                        <?php
+                            echo "<td><a href=\"delete_user.php?userid=".$row['user_id']."\"><i class=\"fas fa-trash-alt\"></i></a></td>";?>
+
                     </tr>
                 <?php endwhile; ?>
                 </tbody>

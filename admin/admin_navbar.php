@@ -12,16 +12,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="add_user.php"> Add User |</a>
             <li class="nav-item">
-                <a class="nav-link" href="../admin/edit_user.php">Edit User |</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="../admin/course.php">Course |</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="add_course.php">Add Course |</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../admin/edit_course.php">Edit Course |</a>
             </li>
 
             <li class="nav-item topnav-right">

@@ -5,19 +5,22 @@ include("../connectDB.php");
 
 $userRetrieved =  $_SESSION['user_id']; 
 $courseRetrieved = $_GET['courseid'];
-
-$sql2= "SELECT user.user_id, user.first_name, user.last_name FROM user, enrollment WHERE user.role='student' AND enrollment.course_id = '$courseRetrieved' AND user.user_id = enrollment.user_id";
-$result2=mysqli_query($conn, $sql2);
-$count2 = mysqli_num_rows($result2);
+//Select c.course_id,c.course_name,c.course_start_time,c.course_finish_time,u.user_id from course as c
+//        inner join enrollment as e on e.course_id = c.course_id
+//        inner join user as u on e.user_id = u.user_id where e.user_id = '$user_id' ";
+$sql= "SELECT * from course as c inner join enrollment as e on e.course_id = c.course_id inner join user as u on e.user_id = u.user_id 
+        where u.role = 'student' AND e.course_id = '$courseRetrieved'";
+$result=mysqli_query($conn, $sql);
 
 if(isset($_POST['submit_grade'])){
      while($row = mysqli_fetch_array($result2)) :
-$tempuser = $row['user_id'];
-$tempassignment = $_POST['assignment_name'];
-$gradeEntered= $_POST['grade'];
-$sql3 = "INSERT INTO submission(grade_for_submission)
-VALUES ('$gradeEntered') WHERE user_id = $tempuser AND course_id = '$courseRetrieved' AND assignment_name='$tempassignment'";
-$result3=mysqli_query($conn, $sql3);
+        $tempuser = $row['user_id'];
+        $tempassignment = $_POST['assignment_name'];
+        $gradeEntered= $_POST['grade'];
+
+        $sql3 = "INSERT INTO submission(grade_for_submission)
+        VALUES ('$gradeEntered') WHERE user_id = $tempuser AND course_id = '$courseRetrieved' AND assignment_name='$tempassignment'";
+        $result3=mysqli_query($conn, $sql3);
  endwhile;   
 }
 
@@ -58,7 +61,7 @@ $result3=mysqli_query($conn, $sql3);
          </thead>
         <tbody>
        
-        <?php while($row = mysqli_fetch_array($result2)) :?>
+        <?php while($row = mysqli_fetch_array($result1)) :?>
         
             <tr>
                 <td><?php echo $row['user_id'];?></td>
@@ -76,7 +79,7 @@ $result3=mysqli_query($conn, $sql3);
                 </select>
                 </td>    
                 <td><input type="number" id ="grade" name="grade"></td>     
-                <td><input type = "submit" name="submit_grade" id="submit_grade" value="Update"></td>
+                <td><input type = "submit" name="submit_grade" id="submit_grade" value="Grade"></td>
                 <?php endwhile;  ?> 
             </tr>             
         </tbody>

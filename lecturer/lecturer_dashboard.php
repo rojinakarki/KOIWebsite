@@ -27,8 +27,7 @@ mysqli_close($conn);
         <?php foreach($enrollment as $enroll){?>
             <div class="col-sm d-flex">
                 <div class="card flex-fill" >
-                    <div class="card-header"> <?php echo htmlspecialchars($enroll['course_id']);?> </div>
-
+                    <div class="card-header"> <?php echo htmlspecialchars($enroll['course_id']);?></div>
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><strong><?php echo htmlspecialchars($enroll['course_name']);?></strong></a></li>
@@ -45,8 +44,8 @@ mysqli_close($conn);
                             <li class="list-group-item"><a href="add_quiz.php?courseid=<?php echo $enroll['course_id'] ?>"><i class="fas fa-plus"> Quiz </i></a>
                                 &nbsp; <a href="quiz.php?courseid=<?php echo $enroll['course_id'] ?>"><i class="fas fa-eye"> Quiz </i></a>
 
-                                <!--                            Grade-->
-                            <li class="list-group-item"><a href="grade_assignment.php?courseid=<?php echo $enroll['course_id'] ?>"><i class="fas fa-plus"> Grade </i></a></li>
+                                <!--Grade-->
+                            <li class="list-group-item"><a href="add_grade_assignment.php?courseid=<?php echo $enroll['course_id'] ?>"><i class="fas fa-plus"> Grade </i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -60,3 +59,4 @@ mysqli_close($conn);
 <?php include "../js/js.php";?>
 </body>
 </html>
+

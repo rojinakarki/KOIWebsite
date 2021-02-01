@@ -3,6 +3,7 @@ include("../include/session_check.php");
 require_once("../include/component.php");
 include("../connectDB.php");
 
+$courseRetrieved = $_GET["courseid"];
 $quiz_title = $total_question = $time_limit= $mark_per_que ='';
 $errors = array('quiz_title'=>'',
     'total_question'=>'',
@@ -14,7 +15,7 @@ if(isset($_POST['create-quiz'])) {
         $errors['quiz_title'] = 'Quiz Title is required <br/>';
     } else {
         $quiz_title = $_POST['quiz_title'];
-        if (!preg_match("/^[a-zA-Z\s]+$/", $quiz_title)) {
+        if (!preg_match("/^[a-zA-Z0-9\s]+$/", $quiz_title)) {
             $errors['quiz_title'] = "Quiz Title must be letters and spaces only";
         }
     }
@@ -53,13 +54,13 @@ if(isset($_POST['create-quiz'])) {
         $mark_per_que= mysqli_real_escape_string($conn,$_POST['mark_per_que']);
 
 //      Insert course details into DB Table Course
-        $sql = "INSERT INTO quiz(quiz_title,total_question,time_limit,mark_per_que,)
-                 VALUES ('$quiz_title','$total_question','$time_limit', '$mark_per_que')";
+        $sql = "INSERT INTO quiz (quiz_title,total_question,time_limit,mark_per_que, course_id)
+                 VALUES ('$quiz_title','$total_question','$time_limit', '$mark_per_que','$courseRetrieved')";
 
 //      Save to db and check
         if(mysqli_query($conn,$sql)){
             // success
-            header('Location:course.php');
+            header("Location:quiz.php");
         }else{
             // error
             echo "Query error:". mysqli_error($conn);
@@ -108,14 +109,10 @@ if(isset($_POST['create-quiz'])) {
             </div>
             <br>
             <div class="col">
-                <?php buttonElement("btn-create","btn btn-success btn-block", "Submit and Add Quiz Question","create-quiz","data-toggle='tooltip' data-placement='bottom' title='Create' ");?>
+                <?php buttonElement("btn-create","btn btn-success btn-block", "Create","create-quiz","data-toggle='tooltip' data-placement='bottom' title='Create' ");?>
             </div>
         </form>
     </div>
-
-
-
-
 <?php include "../js/js.php";?>
 </body>
 </html>
