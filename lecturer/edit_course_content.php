@@ -6,7 +6,7 @@ $courseContentRetrieved = $_GET["course_content_id"];
 $sql = "SELECT c.course_id,c.course_name, cc.course_content FROM course_content as cc 
         inner join course as c on cc.course_id = c.course_id where cc.course_content_id = $courseContentRetrieved";
 $result = mysqli_query($conn, $sql);
-$count = mysqli_num_rows($result);
+
 
 if(isset($_POST['update-course-content'])) {
     $course_content = $_FILES['course_content'];
@@ -27,7 +27,7 @@ if(isset($_POST['update-course-content'])) {
 //  Save to db and check
     if(mysqli_query($conn,$sqlDelQuery)){
         // success
-        header('Location:all_course_details.php');
+        header('Location:course_details.php');
     }else{
         // error
         echo "Query error:". mysqli_error($conn);

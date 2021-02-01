@@ -29,7 +29,7 @@ if(isset($_POST['upload-course-content'])) {
 //  Save to db and check
     if(mysqli_query($conn,$sql)){
         // success
-        header('Location:all_course_details.php');
+        header('Location:course_details.php');
     }else{
         // error
         echo "Query error:". mysqli_error($conn);

@@ -14,7 +14,10 @@ if(isset($_POST['search'])){
 }
 // Get all records from user
 else{
-    $sql="SELECT * FROM user";
+//    $sql="SELECT * FROM user";
+
+    $sql="SELECT * FROM enrollment as e inner join course as c on e.course_id = c.course_id 
+          right join user as u on e.user_id = u.user_id";
     $result=mysqli_query($conn, $sql);
 }
 ?>
@@ -42,19 +45,20 @@ else{
         <div class="d-flex table-data">
             <table class="table table-striped">
                 <thead class="thead-dark">
-                    <tr>
-                        <th>KOI ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Address</th>
-                        <th>Email Address</th>
-                        <th>Mobile Number</th>
-                        <th>DOB</th>
-                        <th>Role</th>
-                        <th>Status</th>
-                        <th>EDIT</th>
-                        <th>ASSIGN</th>
-                    </tr>
+                <tr>
+                    <th>KOI ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>Email Address</th>
+                    <th>Mobile Number</th>
+                    <th>DOB</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Assigned Course</th>
+                    <th>EDIT</th>
+                    <th>ASSIGN</th>
+                </tr>
                 </thead>
                 <tbody>
                 <?php while($row = mysqli_fetch_array($result)) :?>
@@ -68,9 +72,10 @@ else{
                         <td><?php echo $row['dob'];?></td>
                         <td><?php echo $row['role'];?></td>
                         <td><?php echo $row['status'];?></td>
+                        <td><?php echo $row['course_name'];?></td>
                         <td><a href="edit_user.php?userid=<?php echo $row['user_id'] ?>"><i class="fas fa-edit"></i></a>
-                        <?php  if($row['role'] =='lecturer'|| $row['role'] =='student'){
-                            echo "<td><a href=\"assign_course.php?userid=".$row['user_id']."\"><i class=\"fas fa-tasks\"></i></a>";}?>
+                            <?php  if($row['role'] =='lecturer'|| $row['role'] =='student'){
+                                echo "<td><a href=\"assign_course.php?userid=".$row['user_id']."\"><i class=\"fas fa-tasks\"></i></a>";}?>
                     </tr>
                 <?php endwhile; ?>
                 </tbody>

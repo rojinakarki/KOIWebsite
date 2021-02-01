@@ -33,17 +33,33 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5912ea6f-4aa0-49ef-a2fe-05f7f6217e68" name="Default Changelist" comment="updated 01/31/2021">
-      <change afterPath="$PROJECT_DIR$/student/student_course.php" afterDir="false" />
+    <list default="true" id="5912ea6f-4aa0-49ef-a2fe-05f7f6217e68" name="Default Changelist" comment="updated 01/31/2021 latest 01:04">
+      <change afterPath="$PROJECT_DIR$/filesample.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecturer/add_assignment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecturer/add_quiz.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecturer/add_quiz_question.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecturer/assignment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecturer/edit_assignment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecturer/edit_quiz.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecturer/grade_assignment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecturer/quiz.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/student_submit_assignment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/student_view_assignment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/session_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/session_check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin_navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assign_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assign_course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/create_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/create_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lecturer/add_course_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/add_course_content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecturer/all_course_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/course_details.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lecturer/edit_course_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/edit_course_content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_course.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lecturer/lecturer_navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_navbar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student/student_dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/student_navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/js/jquery-3.5.1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +73,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -85,7 +102,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../xampp/htdocs/ONLINE_QUIZ_SYSTEM_IN_PHP_WITH_SOURCE_CODE" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -99,6 +116,8 @@
       <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite\resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite\student" />
+      <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite\lecturer" />
       <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite\admin" />
       <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite" />
       <recent name="C:\Users\ma\PhpstormProjects\KOIWebsite\CSS" />
@@ -129,7 +148,10 @@
       <workItem from="1611971686765" duration="1201000" />
       <workItem from="1611973013734" duration="34472000" />
       <workItem from="1612023191263" duration="1301000" />
-      <workItem from="1612044309880" duration="13817000" />
+      <workItem from="1612044309880" duration="14126000" />
+      <workItem from="1612136355484" duration="3518000" />
+      <workItem from="1612140027684" duration="14640000" />
+      <workItem from="1612155986958" duration="7463000" />
     </task>
     <task id="LOCAL-00001" summary="updated 01/31/2021">
       <created>1612022424988</created>
@@ -138,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612022424988</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updated 01/31/2021 latest 01:04">
+      <created>1612058712017</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612058712017</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +214,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated 01/31/2021" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated 01/31/2021" />
+    <MESSAGE value="updated 01/31/2021 latest 01:04" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated 01/31/2021 latest 01:04" />
   </component>
   <component name="WindowStateProjectService">
     <state x="401" y="165" key="#Notifications" timestamp="1611971926820">
@@ -204,10 +234,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1611972570445" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1612022694598">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1612160036387">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1612022694598" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1612160036387" />
     <state x="516" y="239" key="Github.ShareDialog" timestamp="1612022678664">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -220,30 +250,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="51" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1612021059878" />
-    <state x="674" y="224" key="NewPhpFileDialog" timestamp="1612044834218">
+    <state x="674" y="224" key="NewPhpFileDialog" timestamp="1612162878741">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="674" y="224" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1612044834218" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1611289363023">
+    <state x="674" y="224" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1612162878741" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1612140002976">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1611289363023" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1612022742432">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1612140002976" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1612058737991">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1612022742432" />
-    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612022516769">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1612058737991" />
+    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612058684760">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1612022516769" />
+    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1612058684760" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1612052326716">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1612052326716" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1612020219237">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1612157710626">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1612020219237" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1612157710626" />
     <state x="471" y="132" key="svn.repositoryBrowser" timestamp="1611751009607">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

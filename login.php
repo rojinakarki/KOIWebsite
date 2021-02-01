@@ -29,7 +29,7 @@ if(isset($_POST['submit'])) {
     where try_time>'$time' and ip_address = '$ip_address'"));
     $total_count = $check_login['total_count'];
     if($total_count==3){
-        $_SESSION['errorMessage'] ="Too many failed login attempts. Please login after 30 secs.";
+        $_SESSION['errorMessage'] ="Too many failed login attempts. <br> Please login after 30 secs.";
     }
     else{
         $user_id = mysqli_real_escape_string($conn, $_POST['user_id']);
@@ -42,7 +42,7 @@ if(isset($_POST['submit'])) {
             while ($row = mysqli_fetch_array($result)) {
                 $_SESSION['user_id'] = $row['user_id'];
                 if ($row['status'] == 'passive') {
-                    $_SESSION['errorMessage'] = "Your account has been locked.Please contact admin";
+                    $_SESSION['errorMessage'] = "Your account has been locked. <br> Please contact admin";
                     header("location:login.php");
                     exit();
                 }
@@ -63,7 +63,7 @@ if(isset($_POST['submit'])) {
             $total_count++;
             $rem_attempt=3-$total_count;
             if($rem_attempt==0){
-                $_SESSION['errorMessage'] ="Too many failed login attempts. Please login after 30 secs.";
+                $_SESSION['errorMessage'] ="Too many failed login attempts. <br> Please login after 30 secs.";
             }else{
                 $_SESSION['errorMessage'] = "Invalid Credentials. Try Again! </br> Remaining Attempt: $rem_attempt ";
             }

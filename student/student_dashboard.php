@@ -26,22 +26,24 @@ mysqli_close($conn);
 <body>
 <?php include "../student/student_navbar.php";?>
 <div class="container-fluid pt-2">
-        <div class="row">
-            <?php foreach($enrollment as $enroll){?>
+    <div class="row">
+        <?php foreach($enrollment as $enroll){?>
             <div class="col-sm d-flex">
                 <div class="card flex-fill" >
                     <div class="card-header"> <?php echo htmlspecialchars($enroll['course_id']);?> </div>
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="student_course.php?courseid=<?php echo $enroll['course_id'];?>"> <?php echo htmlspecialchars($enroll['course_name']);?></a></li>
+                            <li class="list-group-item"><strong><?php echo htmlspecialchars($enroll['course_name']);?></strong></a></li>
                             <li class="list-group-item"> Start Time: <?php echo htmlspecialchars($enroll['course_start_time']);?> </li>
                             <li class="list-group-item"> Finish Time: <?php echo htmlspecialchars($enroll['course_finish_time']);?></li>
+                            <li class="list-group-item"><a href="student_view_assignment.php?courseid=<?php echo $enroll['course_id'];?>">View Assignment</a></li>
+                            <li class="list-group-item"><a href="student_submit_assignment.php?courseid=<?php echo $enroll['course_id'];?>"> Submit Assignment</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <?php }?>
-        </div>
+        <?php }?>
+    </div>
 </div>
 
 <?php include "../js/js.php";?>
