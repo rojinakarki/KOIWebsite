@@ -125,7 +125,7 @@ if(isset($_POST['create-quiz-que'])) {
         </div>
 
         <!--Quiz Option1 -->
-        <div class="col optional option"  >
+        <div class="col optional option"  style="display: none;" >
             <div class="pt-2">
                 <div class="input-group my-auto">
                     <div class="input-group-prepend">
@@ -137,7 +137,7 @@ if(isset($_POST['create-quiz-que'])) {
             <span class="error"><?php echo $errors['quiz_option1'];?></span>
         </div>
         <!--Quiz Option2 -->
-        <div class="col optional option" >
+        <div class="col optional option" style="display: none;">
             <div class="pt-2">
                 <div class="input-group my-auto">
                     <div class="input-group-prepend">
@@ -149,7 +149,7 @@ if(isset($_POST['create-quiz-que'])) {
             <span class="error"><?php echo $errors['quiz_option2'];?></span>
         </div>
         <!--Quiz Option3 -->
-        <div class="col optional option"  >
+        <div class="col optional option" style="display: none;" >
             <div class="pt-2">
                 <div class="input-group my-auto">
                     <div class="input-group-prepend">
@@ -161,7 +161,7 @@ if(isset($_POST['create-quiz-que'])) {
             <span class="error"><?php echo $errors['quiz_option3'];?></span>
         </div>
         <!--Quiz Option4 -->
-        <div class="col optional option"  >
+        <div class="col optional option"  style="display: none;">
             <div class="pt-2">
                 <div class="input-group my-auto">
                     <div class="input-group-prepend">
@@ -181,17 +181,17 @@ if(isset($_POST['create-quiz-que'])) {
 </div>
 
 <?php include "../js/js.php";?>
-<!--<script>-->
-<!--    $("select").change(function () {-->
-<!--        // hide all optional elements-->
-<!--        $(".optional").css("display","none");-->
-<!---->
-<!--        $("select option:selected").each(function () {-->
-<!--            if($(this).val() === "mcq") {-->
-<!--                $('.option').css('display','block');-->
-<!--            }-->
-<!--        });-->
-<!--    });-->
-<!--</script>-->
+<script>
+    $("select").change(function () {
+        // hide all optional elements
+        $(".optional").css("display","none");
+
+        $("select option:selected").each(function () {
+            if($(this).val() === "mcq") {
+                $('.option').css('display','block');
+            }
+        });
+    });
+</script>
 </body>
 </html>

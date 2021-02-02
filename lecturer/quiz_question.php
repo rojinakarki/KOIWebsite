@@ -39,7 +39,8 @@ mysqli_close($conn);
                             <li class="list-group-item">Option 4: &nbsp;<strong><?php echo htmlspecialchars($qq['quiz_option4']);?></strong></a></li>
                             <li class="list-group-item">Answer: &nbsp; <strong><?php echo htmlspecialchars($qq['quiz_answer']);?></strong></a></li>
                             <li class="list-group-item"><a href="edit_quiz_question.php?quizquestionid=<?php echo $qq['quiz_question_id'] ?>"><i class="fas fa-edit"> Quiz Question </i></a>
-<!--                                &nbsp; &nbsp;<a href="add_quiz_question.php?quizid=--><?php //echo $quiz['quiz_id'] ?><!--"><i class="fas fa-plus"> Quiz Question </i></a>-->
+                                &nbsp; &nbsp;  <a href="delete_quiz_question.php?quizquestionid=<?php echo $qq['quiz_question_id'] ?>"><i class="fas fa-trash-alt"> Quiz Question </i></a></li>
+<!--                               <a href="add_quiz_question.php?quizid=--><?php //echo $quiz['quiz_id'] ?><!--"><i class="fas fa-plus"> Quiz Question </i></a>-->
 <!--                                &nbsp; &nbsp;<a href="view_quiz_question.php?courseid=--><?php //echo $quiz['course_id'] ?><!--"><i class="fas fa-eye"> Quiz Question </i></a>-->
                             </li>
                         </ul>
